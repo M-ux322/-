@@ -19,6 +19,6 @@ TEST(PalindromTest, BasicNonPalindroms) {
 
 TEST(PalindromTest, EdgeCases) {
     EXPECT_TRUE(is_palindrom(""));
-    EXPECT_TRUE(is_palindrom("a"));
-    EXPECT_TRUE(is_palindrom("aa"));
+    EXPECT_TRUE(is_palindrom("c"));
+    EXPECT_TRUE(is_palindrom("cc"));
 }
