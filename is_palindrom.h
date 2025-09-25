@@ -1,4 +1,3 @@
 #pragma once
 
-
-bool is_palindrom(int x);
+bool is_palindrom(char str[]);
