@@ -1,22 +1,23 @@
 #include <iostream>
 #include "is_palindrom.h"
 
-bool is_palindrom(int x){
-    int number = x;
-    int revers = 0;
+#include <iostream>
 
-    if (x < 0) {
-        return false;
+bool is_palindrom(char str[]) {
+    int len = 0;
+    while (str[len] != '\0') {
+        len++;
     }
 
-    while (number != 0){
-        revers = revers * 10 + number % 10;
-        number = number / 10;
+    int left = 0;
+    int right = len - 1;
+    
+    while (left < right) {
+        if (str[left] != str[right]) {
+            return false;
+        }
+        left++;
+        right--;
     }
-
-    if (revers == x){
-        return true;
-    } else{
-        return false;
-    }
+    return true;
 }
