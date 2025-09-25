@@ -21,11 +21,12 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 # Основная программа
-add_executable(palindrome_checker laba1.cpp is_palindrom.cpp)
+add_executable(palindrome_checker main.cpp is_palindrom.cpp)
 
 # Тесты
 add_executable(test_palindrom tests/test_palindrom.cpp is_palindrom.cpp)
 target_link_libraries(test_palindrom gtest_main)
 
 enable_testing()
+
 add_test(NAME PalindromTest COMMAND test_palindrom)
