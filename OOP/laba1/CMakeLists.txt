@@ -10,8 +10,8 @@ endif()
 
 project(palindrome_checker)
 
-
 include(FetchContent)
+
 FetchContent_Declare(
   googletest
   URL https://github.com/google/googletest/archive/refs/heads/main.zip
@@ -24,6 +24,4 @@ add_executable(test_palindrom tests/test_palindrom.cpp is_palindrom.cpp)
 target_link_libraries(test_palindrom gtest_main)
 
 enable_testing()
-
 add_test(NAME PalindromTest COMMAND test_palindrom)
-
